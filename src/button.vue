@@ -10,8 +10,12 @@
 </template>
 
 <script lang="ts">
+    import Vue from 'vue'
+    import Icon from './icon'
     export default {
-        name: 'button',
+        components:{
+'g-icon':Icon
+        },
         props:{
             icon:{},
             loading:{
@@ -45,12 +49,12 @@
     justify-content: center;
     align-items: center;
     vertical-align: middle;
-    a:hover{
+    &:hover{
         border-color:var(--border-color-hover)
 }
-    a:active{
+    &:active{
        background-color:var(--button-active-bg)
-   }  a:focus{
+   }  &:focus{
           outline: none;
       }
     >.content{order:2}
